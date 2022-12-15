@@ -71,7 +71,7 @@
             }
     
             .submit {
-                background-color: #004cff;
+                background-color: #DD0150;
                 padding: 15px 15px 15px 15px;
                 width: 220px;
                 border-radius: 5px;
@@ -83,7 +83,7 @@
             }
     
             .submit:hover {
-                background-color: #00a2ff;
+                background-color: #f74586;
             }
     
             .result {
@@ -105,28 +105,38 @@
                 <br>
     
                 <form>
-                    
-                    <label>Pilih Anu</label><br>
+                    <label id="lmobile"></label> <Br>
+                    <input class="input" id="mobile" type="tel"
+                        pattern="(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)|(\d+)))|(\(\d+\) \d+)|\d{3}( \d+)+|(\d+[ -]\d+)|\d+"
+                        name="mobile" size="15" value="" />
+                    <div id="rmobile" class="result"></div>
+    
+    
+                    <label id="lemail"></label> <Br>
+                    <input class="input" id="email" type="email" value="" name="email" size="15" />
+                    <div id="remail" class="result"></div>
+    
+    
+                    <label id="lcontext"></label><br>
                     <select class="custom-select" id="context" name="context">
-                        <option class="select-opt" id="halodocbalance">Halodoc Balance</option>
+                        <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
                         <option class="select-opt" value="LinkAja">LinkAja</option>
-                        <option class="select-opt" id="creditcard">Credit Card</option>
+                        <option class="select-opt" id="creditcard"></option>
                     </select>
-
-                    <label>Pilih Anu</label><br>
-                    <select class="custom-select" id="context" name="context">
-                        <option class="select-opt" id="halodocbalance">Halodoc Balance</option>
-                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
-                        <option class="select-opt" value="Gopay">Gopay</option>
-                        <option class="select-opt" value="LinkAja">LinkAja</option>
-                        <option class="select-opt" id="creditcard">Credit Card</option>
-                    </select>
+                    <div id="rcontext" class="result"></div>
+    
+    
+                    <label id="lamount"></label><br>
+                    <input class="input" id="amount" type="number" name="amount" min="0" value="0" />
+                    <div id="ramount" class="result"></div>
     
     
                     <input type="hidden" id="language" name="language" value="id" />
-                    <button id="submit" class="submit">Submit</button>
+                    <input type="hidden" id="vcontext" name="lcontext" value="" />
+                    <input type="hidden" id="vamount" name="lamount" value="" />
+                    <button id="submit" class="submit"></button>
                 </form>
     
             </div>
@@ -147,6 +157,47 @@
             var amount = params.get('amount')
             var mincontext = params.get('mincontext')
     
+            console.log({ context, language });
+            document.getElementById('lcontext').innerHTML = lcontext;
+            document.getElementById('lamount').innerHTML = lamount;
+            let x = document.getElementById('vcontext');
+            let z = document.getElementById('vamount');
+            // let y = document.getElementById('context');
+            x.setAttribute("value", lcontext);
+            z.setAttribute("value", lamount);
+            // if (parseInt(mincontext)) {
+            //     y.setAttribute("minlength", `${mincontext}`);
+            //     language == "id" ? y.setAttribute("oninvalid", `this.setCustomValidity('Minimum ${mincontext} karakter')`) : y.setAttribute("oninvalid", `this.setCustomValidity('${mincontext} characters minimum')`)
+            //     y.setAttribute("oninput", "setCustomValidity('')");
+            // }
+    
+            if (language == 'id') {
+                document.getElementById('mobile').placeholder = 'Nomor telepon yang terdaftar';
+                document.getElementById('email').placeholder = 'Email aktif';
+                document.getElementById('header').innerHTML = 'Silahkan berikan informasi berikut dan tim CS kami akan segera menghubungimu kembali:';
+                document.getElementById('lmobile').innerHTML = 'Nomor Telepon';
+                document.getElementById('lemail').innerHTML = 'Email';
+                document.getElementById('submit').innerHTML = 'Kirim Tiket';
+                document.getElementById('creditcard').innerHTML = 'Kartu Kredit / Debit'
+                document.getElementById('halodocbalance').innerHTML = 'Saldo Halodoc'
+                document.getElementById('creditcard').setAttribute("value", "Kartu Kredit / Debit")
+                document.getElementById('halodocbalance').setAttribute("value", "Saldo Halodoc")
+                let x = document.getElementById('language');
+                x.setAttribute("value", "id");
+            } else {
+                document.getElementById('mobile').placeholder = 'Enter your registered mobile number';
+                document.getElementById('email').placeholder = 'Enter your active email ID';
+                document.getElementById('header').innerHTML = 'We need some information to create a ticket for your complaint. First, share your:';
+                document.getElementById('lmobile').innerHTML = 'Mobile Number';
+                document.getElementById('lemail').innerHTML = 'Email';
+                document.getElementById('submit').innerHTML = 'Confirm';
+                document.getElementById('creditcard').innerHTML = 'Credit card / Debit'
+                document.getElementById('halodocbalance').innerHTML = 'Halodoc Balance'
+                document.getElementById('creditcard').setAttribute("value", "Credit card / Debit")
+                document.getElementById('halodocbalance').setAttribute("value", "Halodoc Balance")
+                let x = document.getElementById('language');
+                x.setAttribute("value", "en");
+            }
     
             if (mobile && email && context && amount) {
                 let m = document.getElementById('mobile');
