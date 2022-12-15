@@ -71,7 +71,7 @@
             }
     
             .submit {
-                background-color: #DD0150;
+                background-color: #000080;
                 padding: 15px 15px 15px 15px;
                 width: 220px;
                 border-radius: 5px;
@@ -106,14 +106,18 @@
     
                 <form>
                     <label id="lmobile"></label> <Br>
-                    <input class="input" id="mobile" type="tel"
+                    <select class="input" id="mobile" type="tel"
                         pattern="(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)|(\d+)))|(\(\d+\) \d+)|\d{3}( \d+)+|(\d+[ -]\d+)|\d+"
                         name="mobile" size="15" value="" />
+                        <option class="select-opt" id="halodocbalance"></option>
+                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
                     <div id="rmobile" class="result"></div>
     
     
                     <label id="lemail"></label> <Br>
-                    <input class="input" id="email" type="email" value="" name="email" size="15" />
+                    <select class="input" id="email" type="email" value="" name="email" size="15" />
+                        <option class="select-opt" id="halodocbalance"></option>
+                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
                     <div id="remail" class="result"></div>
     
     
@@ -190,9 +194,10 @@
                 document.getElementById('header').innerHTML = '';
                 document.getElementById('lmobile').innerHTML = 'Choose a product';
                 document.getElementById('lemail').innerHTML = 'Select type';
+                document.getElementById('lamount').innerHTML = 'Item Price';
                 document.getElementById('submit').innerHTML = 'Calculate your installment';
                 document.getElementById('creditcard').innerHTML = 'Credit card / Debit'
-                document.getElementById('halodocbalance').innerHTML = 'Halodoc Balance'
+                document.getElementById('halodocbalance').innerHTML = ''
                 document.getElementById('creditcard').setAttribute("value", "Credit card / Debit")
                 document.getElementById('halodocbalance').setAttribute("value", "Halodoc Balance")
                 let x = document.getElementById('language');
