@@ -196,20 +196,20 @@
             //     y.setAttribute("oninput", "setCustomValidity('')");
             // }
     
-            if (language == 'id') {
-                document.getElementById('mobile').placeholder = 'Nomor telepon yang terdaftar';
-                document.getElementById('email').placeholder = 'Email aktif';
-                document.getElementById('header').innerHTML = 'Silahkan berikan informasi berikut dan tim CS kami akan segera menghubungimu kembali:';
-                document.getElementById('lmobile').innerHTML = 'Nomor Telepon';
-                document.getElementById('lemail').innerHTML = 'Email';
-                document.getElementById('submit').innerHTML = 'Kirim Tiket';
-                document.getElementById('creditcard').innerHTML = 'Kartu Kredit / Debit'
-                document.getElementById('halodocbalance').innerHTML = 'Saldo Halodoc'
-                document.getElementById('creditcard').setAttribute("value", "Kartu Kredit / Debit")
-                document.getElementById('halodocbalance').setAttribute("value", "Saldo Halodoc")
-                let x = document.getElementById('language');
-                x.setAttribute("value", "id");
-            } else {
+            //if (language == 'id') {
+                //document.getElementById('mobile').placeholder = 'Nomor telepon yang terdaftar';
+                //document.getElementById('email').placeholder = 'Email aktif';
+                //document.getElementById('header').innerHTML = 'Silahkan berikan informasi berikut dan tim CS kami akan segera menghubungimu kembali:';
+                //document.getElementById('lmobile').innerHTML = 'Nomor Telepon';
+                //document.getElementById('lemail').innerHTML = 'Email';
+                //document.getElementById('submit').innerHTML = 'Kirim Tiket';
+                //document.getElementById('creditcard').innerHTML = 'Kartu Kredit / Debit'
+                //document.getElementById('halodocbalance').innerHTML = 'Saldo Halodoc'
+                //document.getElementById('creditcard').setAttribute("value", "Kartu Kredit / Debit")
+                //document.getElementById('halodocbalance').setAttribute("value", "Saldo Halodoc")
+                //let x = document.getElementById('language');
+                //x.setAttribute("value", "id");
+            //} else {
                 document.getElementById('context1').placeholder = 'Please Select';
                 document.getElementById('context2').placeholder = 'Please Select';
                 document.getElementById('header').innerHTML = 'test';
@@ -224,7 +224,7 @@
                 document.getElementById('halodocbalance').setAttribute("value", "Halodoc Balance")
                 let x = document.getElementById('language');
                 x.setAttribute("value", "en");
-            }
+            //}
     
             if (mobile && email && context && amount) {
                 let m = document.getElementById('context1');
