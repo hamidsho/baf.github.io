@@ -105,24 +105,19 @@
                 <br>
     
                 <form>
-                    <label id="lmobile"></label> <Br>
-                    <select class="input" id="mobile" type="tel"
-                        pattern="(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)|(\d+)))|(\(\d+\) \d+)|\d{3}( \d+)+|(\d+[ -]\d+)|\d+"
-                        name="mobile" size="15" value="" />
+                    
+                    <label id="lcontext1"></label><br>
+                    <select class="custom-select" id="context1" name="context1">
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
-                    <div id="rmobile" class="result"></div>
-    
-    
-                    <label id="lemail"></label> <Br>
-                    <select class="input" id="email" type="email" value="" name="email" size="15" />
-                        <option class="select-opt" id="halodocbalance"></option>
-                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
-                    <div id="remail" class="result"></div>
-    
-    
-                    <label id="lcontext"></label><br>
-                    <select class="custom-select" id="context" name="context">
+                        <option class="select-opt" value="Gopay">Gopay</option>
+                        <option class="select-opt" value="LinkAja">LinkAja</option>
+                        <option class="select-opt" id="creditcard"></option>
+                    </select>
+                    <div id="rcontext" class="result"></div>
+                 
+                 <label id="lcontext2"></label><br>
+                    <select class="custom-select" id="context2" name="context2">
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
@@ -135,6 +130,26 @@
                     <label id="lamount"></label><br>
                     <input class="input" id="amount" type="number" name="amount" min="0" value="0" />
                     <div id="ramount" class="result"></div>
+                 
+                 <label id="lcontext4"></label><br>
+                    <select class="custom-select" id="context3" name="context3">
+                        <option class="select-opt" id="halodocbalance"></option>
+                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
+                        <option class="select-opt" value="Gopay">Gopay</option>
+                        <option class="select-opt" value="LinkAja">LinkAja</option>
+                        <option class="select-opt" id="creditcard"></option>
+                    </select>
+                    <div id="rcontext" class="result"></div>
+                 
+                 <label id="lcontext5"></label><br>
+                    <select class="custom-select" id="context4" name="context4">
+                        <option class="select-opt" id="halodocbalance"></option>
+                        <option class="select-opt" value="Virtual Account">Virtual Account</option>
+                        <option class="select-opt" value="Gopay">Gopay</option>
+                        <option class="select-opt" value="LinkAja">LinkAja</option>
+                        <option class="select-opt" id="creditcard"></option>
+                    </select>
+                    <div id="rcontext" class="result"></div>
     
     
                     <input type="hidden" id="language" name="language" value="id" />
@@ -189,8 +204,8 @@
                 let x = document.getElementById('language');
                 x.setAttribute("value", "id");
             } else {
-                document.getElementById('mobile').placeholder = 'Please Select';
-                document.getElementById('email').placeholder = 'Please Select';
+                document.getElementById('lcontext1').placeholder = 'Please Select';
+                document.getElementById('lcontext2').placeholder = 'Please Select';
                 document.getElementById('header').innerHTML = 'test';
                 document.getElementById('lmobile').innerHTML = 'Choose a product';
                 document.getElementById('lemail').innerHTML = 'Select type';
