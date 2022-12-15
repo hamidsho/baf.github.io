@@ -108,7 +108,7 @@
                     
                     <label id="lcontext1"></label><br>
                     <select class="custom-select" id="context1" name="context1">
-                     <option value="" disabled selected>Select your option</option>
+                     <option value="" disabled selected>Please Select</option>
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
@@ -119,6 +119,7 @@
                  
                  <label id="lcontext2"></label><br>
                     <select class="custom-select" id="context2" name="context2">
+                     <option value="" disabled selected>Please Select</option>
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
@@ -134,6 +135,7 @@
                  
                  <label id="lcontext3"></label><br>
                     <select class="custom-select" id="context3" name="context3">
+                     <option value="" disabled selected>Please Select</option>
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
@@ -144,6 +146,7 @@
                  
                  <label id="lcontext4"></label><br>
                     <select class="custom-select" id="context4" name="context4">
+                     <option value="" disabled selected>Please Select</option>
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
                         <option class="select-opt" value="Gopay">Gopay</option>
@@ -211,12 +214,13 @@
                 //let x = document.getElementById('language');
                 //x.setAttribute("value", "id");
             //} else {
-                document.getElementById('context1').placeholder = 'Please Select';
+                document.getElementById('context3').placeholder = 'Please Select';
                 document.getElementById('context2').placeholder = 'Please Select';
                 //document.getElementById('header').innerHTML = 'test';
                 document.getElementById('lcontext1').innerHTML = 'Choose a product';
                 document.getElementById('lcontext2').innerHTML = 'Select type';
                 document.getElementById('lamount').innerHTML = 'Item Price';
+                document.getElementById('lamount').placeholder = 'Item Price';
                 document.getElementById('lcontext3').innerHTML = 'Time Period'; 
                 document.getElementById('lcontext4').innerHTML = 'Down Payment';
                 document.getElementById('submit').innerHTML = 'Calculate your installment';
