@@ -114,7 +114,7 @@
                         <option class="select-opt" value="LinkAja">LinkAja</option>
                         <option class="select-opt" id="creditcard"></option>
                     </select>
-                    <div id="rcontext" class="result"></div>
+                    <div id="rcontext1" class="result"></div>
                  
                  <label id="lcontext2"></label><br>
                     <select class="custom-select" id="context2" name="context2">
@@ -124,11 +124,11 @@
                         <option class="select-opt" value="LinkAja">LinkAja</option>
                         <option class="select-opt" id="creditcard"></option>
                     </select>
-                    <div id="rcontext" class="result"></div>
+                    <div id="rcontext2" class="result"></div>
     
     
                     <label id="lamount"></label><br>
-                    <input class="input" id="amount" type="number" name="amount" min="0" value="0" />
+                    <input class="input" id="amount" type="number" name="amount" min="0" value="" />
                     <div id="ramount" class="result"></div>
                  
                  <label id="lcontext4"></label><br>
@@ -139,7 +139,7 @@
                         <option class="select-opt" value="LinkAja">LinkAja</option>
                         <option class="select-opt" id="creditcard"></option>
                     </select>
-                    <div id="rcontext" class="result"></div>
+                    <div id="rcontext3" class="result"></div>
                  
                  <label id="lcontext5"></label><br>
                     <select class="custom-select" id="context4" name="context4">
@@ -149,7 +149,7 @@
                         <option class="select-opt" value="LinkAja">LinkAja</option>
                         <option class="select-opt" id="creditcard"></option>
                     </select>
-                    <div id="rcontext" class="result"></div>
+                    <div id="rcontext4" class="result"></div>
     
     
                     <input type="hidden" id="language" name="language" value="id" />
@@ -204,11 +204,11 @@
                 let x = document.getElementById('language');
                 x.setAttribute("value", "id");
             } else {
-                document.getElementById('lcontext1').placeholder = 'Please Select';
-                document.getElementById('lcontext2').placeholder = 'Please Select';
+                document.getElementById('context1').placeholder = 'Please Select';
+                document.getElementById('context2').placeholder = 'Please Select';
                 document.getElementById('header').innerHTML = 'test';
-                document.getElementById('lmobile').innerHTML = 'Choose a product';
-                document.getElementById('lemail').innerHTML = 'Select type';
+                document.getElementById('lcontext1').innerHTML = 'Choose a product';
+                document.getElementById('lcontext2').innerHTML = 'Select type';
                 document.getElementById('lamount').innerHTML = 'Item Price';
                 document.getElementById('lcontext').innerHTML = 'Time Period'; 
                 document.getElementById('submit').innerHTML = 'Calculate your installment';
