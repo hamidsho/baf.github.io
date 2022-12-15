@@ -131,7 +131,7 @@
                     <input class="input" id="amount" type="number" name="amount" min="0" value="" />
                     <div id="ramount" class="result"></div>
                  
-                 <label id="lcontext4"></label><br>
+                 <label id="lcontext3"></label><br>
                     <select class="custom-select" id="context3" name="context3">
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
@@ -141,7 +141,7 @@
                     </select>
                     <div id="rcontext3" class="result"></div>
                  
-                 <label id="lcontext5"></label><br>
+                 <label id="lcontext4"></label><br>
                     <select class="custom-select" id="context4" name="context4">
                         <option class="select-opt" id="halodocbalance"></option>
                         <option class="select-opt" value="Virtual Account">Virtual Account</option>
@@ -221,9 +221,9 @@
             }
     
             if (mobile && email && context && amount) {
-                let m = document.getElementById('mobile');
-                let e = document.getElementById('email');
-                let c = document.getElementById('context');
+                let m = document.getElementById('context1');
+                let e = document.getElementById('context2');
+                let c = document.getElementById('context3');
                 let a = document.getElementById('amount');
                 let s = document.getElementById('submit');
                 m.setAttribute("type", "hidden");
@@ -232,9 +232,9 @@
                 c.hidden = true;
                 a.setAttribute("type", "hidden");
                 s.style.visibility = "hidden";
-                document.getElementById('rmobile').innerHTML = mobile;
-                document.getElementById('remail').innerHTML = email;
-                document.getElementById('rcontext').innerHTML = context;
+                document.getElementById('rcontext1').innerHTML = mobile;
+                document.getElementById('rcontext2').innerHTML = email;
+                document.getElementById('rcontext3').innerHTML = context;
                 document.getElementById('ramount').innerHTML = `Rp${parseInt(amount).toLocaleString().split(',').join('.')}`;
                 m.setAttribute("value", mobile);
                 e.setAttribute("value", email);
